@@ -1,10 +1,11 @@
 /* Question Set 1 - Easy */
 
--- Q1: Based on the job level, who is the senior most employee and what is their job title?
+/* Q1: Based on the job level, who is the senior most employee and what is their job title? */
+
 Select
 	employee_id,
-    first_name,
-    last_name,
+first_name,
+last_name,
     title
 From
 	employee
@@ -12,7 +13,7 @@ Order by
 	levels desc
 Limit 1;
 
--- Q2: What are the Top 10 countries with the most Invoices?
+/* Q2: What are the Top 10 countries with the most Invoices? */
 Select 
     billing_country,
     Count(invoice_id) As Num_of_invoices
@@ -24,7 +25,7 @@ order by
 	Num_of_invoices desc
 Limit 10;
 
--- Q3: What are Top 3 Invoice total values, 2 decimal places, and their invoice_id?
+/* Q3: What are the Top 3 Invoice total values, 2 decimal places, and their invoice_id? */
 Select 
 	invoice_id,
     Round(total, 2) As invoice_total
